@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,6 +54,11 @@ const cart = [
 */
 
 //CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    const taxAmount = cartTotal * tax;
+    const finalPrice = cartTotal + taxAmount - couponValue;
+    return finalPrice;
+}
 
 
 
@@ -79,7 +84,9 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+ // any good customer should have a name so the firstName, lastName are an obvious place to start, dont want to mix up customers online orders!
+ // email is nessessary, probably as a login function and for shipping updatees
+ // depending on the business phone number may not be required but i couldnt think of a 4th thing for a resturant to want from someone, so i put in a phonenumber key 
 */
 
 /*
@@ -88,3 +95,11 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    firstName: "Jenny",
+    lastName: "Doe",
+    email: "TommyTutone@email.com",
+    phoneNumber: "555-867-5309"
+}
+
+// i hope you enjoyed my 867-5309/Jenny referance alec! 
